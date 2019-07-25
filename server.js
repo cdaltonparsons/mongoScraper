@@ -5,7 +5,7 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 var axios = require("axios");
 var cheerio = require("cheerio");
-
+var path = require("path");
 var db = require("./models");
 
 var PORT = 8080;
@@ -26,6 +26,11 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoScraper"
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true
 });
+
+
+app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "/public/index.html"));
+})
 
 // Scraper function
 
