@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pitchfork Scraper</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/journal/bootstrap.min.css" rel="stylesheet" integrity="sha384-ciphE0NCAlD2/N6NUApXAN2dAs/vcSAOTzyE202jJx3oS8n4tAQezRgnlHqcJ59C" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1 class="display-3">Pitchfork Scraper</h1>
+        <p class="lead">Press the button below to display the top 20 songs of 2018 according to Pitchfork</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" id="scrape" role="button">Scrape away!</a>
+          <a class="btn btn-primary btn-lg" id="showSongs" role="button">Display songs!</a>
+        </p>
+      </div>
+
+      
+
+      <div class="container" id="show-songs">
+        <div class="row"> 
+        <div id="song-card-column" class="col-md-7 col-xs-12"></div>
+        <div class="col-md-5" id="note-column"></div>
+      </div> 
+      </div>
+
+
+    <script src="/assets/js/app.js"></script>
+</body>
+</html>
