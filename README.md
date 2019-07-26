@@ -1,1 +1,3 @@
-# mongoScraper
+Pitchfork Scraper is a web scraping app that grabs information from Pitchfork's website and displays it to the user.  It utilizes express, mongoose, cheerio and axios to scrape the information and save it.  It also provides the user the ability to take notes on the song, which will persist until overwritten in the database with an updated note.
+
+I would like to come back to this app and scrape different pages instead of the top 20 songs of 2018.  While the scrape works, it only grabs 20 static songs that won't update for at least a year.
