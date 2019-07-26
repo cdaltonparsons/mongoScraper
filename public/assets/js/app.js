@@ -36,6 +36,11 @@ $("#showSongs").on("click", function(event) {
   });
 });
 
+
+$("#hideSongs").on("click", function(){
+    $("#song-card-column").empty();
+})
+
 $("#scrape").on("click", function(event) {
   $.get("/scrape").then(function(data) {
     console.log("successfully scraped");
