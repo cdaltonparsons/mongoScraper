@@ -43,6 +43,7 @@ $("#clearSongs").on("click", function(){
 }).then(function(data) {
     console.log("Database cleared")
 });
+$("#song-card-column").empty();
 });
 
 $("#scrape").on("click", function(event) {
