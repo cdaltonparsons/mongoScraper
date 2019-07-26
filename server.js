@@ -30,6 +30,8 @@ app.get("/", function(req, res) {
     res.redirect("/songs")
 })
 
+
+
 // Scraper function
 
 console.log("Grabbing the top 20 songs of 2018 from Pitchfork");
@@ -106,6 +108,15 @@ app.post("/songs/:id", function(req, res) {
     });
 });
 
+app.put("/clear", function(req, res) {
+    db.Song.deleteMany({}).then(function(err) {
+        if(err) {
+            console.log(err)
+        } else {
+            console.log("Database cleared!")
+        }
+    })
+})
 
 app.listen(process.env.PORT || 8080, function() {
   console.log("App running on port!");

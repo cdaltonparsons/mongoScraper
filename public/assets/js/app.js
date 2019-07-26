@@ -37,9 +37,14 @@ $("#showSongs").on("click", function(event) {
 });
 
 
-$("#hideSongs").on("click", function(){
-    $("#song-card-column").empty();
-})
+$("#clearSongs").on("click", function(){
+    $.ajax({
+        method: "PUT",
+        url: "/clear"
+}).then(function(data) {
+    console.log("Database cleared")
+});
+});
 
 $("#scrape").on("click", function(event) {
   $.get("/scrape").then(function(data) {
@@ -48,9 +53,7 @@ $("#scrape").on("click", function(event) {
 });
 
 $(document).on("click", "#add-note", function() {
-  // Empty the notes from the note section
   $("#note-column").empty();
-  // Save the id from the p tag
   var thisId = $(this).attr("data-id");
 
   $.get("/songs/" + thisId)
@@ -111,4 +114,4 @@ $(document).on("click", "#saveNote", function() {
   
     $("#titleinput").val("");
     $("#bodyinput").val("");
-  });
+  })
