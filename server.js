@@ -8,7 +8,7 @@ var cheerio = require("cheerio");
 var path = require("path");
 var db = require("./models");
 
-var PORT = 8080;
+// var PORT = 8080;
 
 
 var app = express();
@@ -29,7 +29,7 @@ mongoose.connect(MONGODB_URI, {
 
 
 app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "/public/index.html"));
+    res.redirect("/songs")
 })
 
 // Scraper function
@@ -110,5 +110,5 @@ app.post("/songs/:id", function(req, res) {
 
 
 app.listen(process.env.PORT || 8080, function() {
-  console.log("App running on port " + PORT + "!");
+  console.log("App running on port!");
 });
