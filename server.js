@@ -109,6 +109,6 @@ app.post("/songs/:id", function(req, res) {
 });
 
 
-app.listen(PORT, function() {
+app.listen(process.env.PORT || 8080, function() {
   console.log("App running on port " + PORT + "!");
 });
