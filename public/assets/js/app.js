@@ -5,7 +5,6 @@ $("#showSongs").on("click", function(event) {
 
     for (var i = 0; i < data.length; i++) {
       console.log(data[i]);
-      // "<button data-id='" + data._id + "
       var cardBody = $("<div>").addClass("card-body");
       var addNoteBtn = $("<a>")
         .addClass("btn btn-secondary btn-sm contact-btn")
